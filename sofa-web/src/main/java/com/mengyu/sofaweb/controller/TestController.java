@@ -1,6 +1,7 @@
 package com.mengyu.sofaweb.controller;
 
 import com.alipay.sofa.runtime.api.annotation.SofaReference;
+import com.alipay.sofa.runtime.api.annotation.SofaReferenceBinding;
 import com.mengyu.sofaapi.MessageService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "test")
 public class TestController {
 
-    @SofaReference(uniqueId = "messageService")
+    @SofaReference(interfaceType = MessageService.class, binding = @SofaReferenceBinding(bindingType = "bolt"))
     private MessageService messageService;
 
     @RequestMapping("/test")

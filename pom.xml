@@ -24,6 +24,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+        <!--否则会告诉你 缺少bolt协议等错误 -->
+		<dependency>
+			<groupId>com.alipay.sofa</groupId>
+			<artifactId>rpc-sofa-boot-starter</artifactId>
+		</dependency>
+
         <!-- 上下文隔离 -->
 		<!--<dependency>-->
 			<!--<groupId>com.alipay.sofa</groupId>-->

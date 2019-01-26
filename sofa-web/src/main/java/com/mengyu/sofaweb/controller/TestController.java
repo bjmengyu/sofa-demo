@@ -14,7 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "test")
 public class TestController {
 
-    @SofaReference(interfaceType = MessageService.class, binding = @SofaReferenceBinding(bindingType = "bolt"))
+    @SofaReference(binding = @SofaReferenceBinding(bindingType = "bolt", timeout = 2000),uniqueId = "messageService")
+//    @SofaReference(binding = @SofaReferenceBinding(bindingType = "bolt", timeout = 2000))
     private MessageService messageService;
 
     @RequestMapping("/test")

@@ -3,11 +3,14 @@ package com.mengyu.sofarpc.impl;
 import com.alipay.sofa.runtime.api.annotation.SofaService;
 import com.alipay.sofa.runtime.api.annotation.SofaServiceBinding;
 import com.mengyu.sofaapi.MessageService;
+import org.springframework.context.annotation.ImportResource;
+import org.springframework.stereotype.Component;
 
 /**
  * @author 见善
  * @date 2019/1/16 下午7:47
  */
+@Component
 @SofaService(interfaceType=MessageService.class,uniqueId = "messageService",bindings = { @SofaServiceBinding(bindingType = "bolt")})
 public class MessageServiceImpl implements MessageService {
     @Override
